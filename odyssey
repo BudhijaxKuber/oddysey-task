@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+        *{
+            margin:0;
+            padding:0;
+        }
+        .top{
+            height:90vh;
+            background-image: linear-gradient(to right, #0d121d, #153458);
+            /*text-shadow: 0 0 10px #f2aa19, 0 0 20px #fff, 0 0 42px black, 0 0 82px black,0 0 92px black;*/
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            -webkit-text-stroke: 10px black;
+        }
+        .g-ants:hover{
+            transition:smooth;
+            transition:1s;
+
+            text-shadow: 0 0 10px #f2aa19, 0 0 20px #fff, 0 0 42px rgb(172, 164, 6), 0 0 82px black,0 0 92px black;
+        }
+
+        .container {
+            display: flex;
+            height: 100%;
+            align-items: center;
+        }
+
+        svg {
+            display: block;
+            font: 10.5em 'Times New Roman';
+            width: 860px;
+            height: 300px;
+            margin: 0 auto;
+        }
+
+        .text-copy {
+            fill: none;   
+            stroke-dasharray: 6% 29%;
+            stroke-width: 5px;
+            stroke-dashoffset: 0%;
+            animation: stroke-offset 5.5s infinite linear;
+        }
+
+        .text-copy:nth-child(1){
+            stroke: #f2aa19;
+            animation-delay: -1;
+        }
+
+        .text-copy:nth-child(2){
+            stroke: #e11304;
+            animation-delay: -2s;
+        }
+
+        .text-copy:nth-child(3){
+            stroke: #ebfc06;
+            animation-delay: -3s;
+        }
+
+        .text-copy:nth-child(4){
+            stroke: #ea1010;
+            animation-delay: -4s;
+        }
+
+        .text-copy:nth-child(5){
+            stroke: #FDB731;
+            animation-delay: -5s;
+        }
+        .Navbar{
+            z-index:15;
+            position:sticky;
+            top:0;
+            background-color:white;
+            color:black;
+            border-radius:0% 0% 0% 0%;
+            height:10vh;
+            display:grid;
+            background-image: linear-gradient(to right, #0d121d, #153458);
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr
+        }
+        .nav-item{
+            cursor:pointer;
+            display:flex;
+            justify-content: left;
+            margin-left:20px;
+            margin-top:10px;
+            align-items: center;
+            font-family: sans-serif;
+            color:orange;
+            font-weight:bold;
+        }
+
+        .nav-item:hover{
+            transition:0.1s;
+            transition-delay:0s;
+            transition:smooth;
+            font-weight:bold;
+            color:orange;
+            text-shadow: 0 0 10px #f2aa19, 0 0 20px #fff, 0 0 42px black, 0 0 82px black,0 0 92px black;
+        }
+
+        @keyframes stroke-offset{
+            100% {stroke-dashoffset: -40%;}
+        }
+        .containeri{
+            position:relative;
+        }
+        .container{
+            position:relative;
+        }
+        .confetti {
+            width: 10px;
+            height: 5px;
+            background-color: #f2d74e;
+            position: absolute;
+            left: 50%;
+            animation: confetti 5s ease-in-out -2s infinite;
+            transform-origin: left top;
+          }
+          .confetti:nth-child(1) {
+            background-color: #f2d74e; left: 20%; animation-delay: 0;
+          }
+          .confetti:nth-child(2) {
+            background-color: #95c3de; left: 20%; animation-delay: -5s;
+          }
+          .confetti:nth-child(3) {
+            background-color: #ff9a91; left: 30%; animation-delay: -3s;
+          }
+          .confetti:nth-child(4) {
+            background-color: #f2d74e; left: 40%; animation-delay: -2.5s;
+          }
+          .confetti:nth-child(5) {
+            background-color: #95c3de; left: 50%; animation-delay: -4s;
+          }
+          .confetti:nth-child(6) {
+            background-color: #ff9a91; left: 60%; animation-delay: -6s;
+          }
+          .confetti:nth-child(7) {
+            background-color: #f2d74e; left: 70%; animation-delay: -1.5s;
+          }
+          .confetti:nth-child(8) {
+            background-color: #95c3de; left: 80%; animation-delay: -2s;
+          }
+          .confetti:nth-child(9) {
+            background-color: #ff9a91; left: 85%; animation-delay: -3.5s;
+          }
+          .confetti:nth-child(10) {
+            background-color: #f2d74e; left: 78%; animation-delay: -2.5s;
+          }
+          
+          @keyframes confetti {
+            0% { transform: rotateZ(15deg) rotateY(0deg) translate(0,0); }
+            25% { transform: rotateZ(5deg) rotateY(360deg) translate(-15vw,10vh); }
+            50% { transform: rotateZ(15deg) rotateY(720deg) translate(15vw,30vh); }
+            75% { transform: rotateZ(5deg) rotateY(1080deg) translate(-20vw,70vh); }
+            100% { transform: rotateZ(15deg) rotateY(1440deg) translate(20vw,70vh); }
+          }
+
+    </style>
+</head>
+<body>
+    <div class="Navbar">
+        <div class="nav-item"><img src="./logo2.png" height="50px"></div>
+        <div class="nav-item"></div>
+        <div class="nav-item">About</div>
+        <div class="nav-item">Events</div>
+        <div class="nav-item">Sponsors</div>
+        <div class="nav-item">Team</div>
+    </div>
+
+    <div class="top">
+        <div class="containeri">
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+          </div>
+          
+    <div class="container">
+        <svg viewBox="0 0 960 300">
+          <symbol id="s-text">
+            
+            <text class='te' text-anchor="middle" x="50%" y="80%" >Oddysey'23</text>
+          </symbol>
+      
+          <g class = "g-ants">
+            <use href="#s-text" class="text-copy"></use>
+            <use href="#s-text" class="text-copy"></use>
+            <use href="#s-text" class="text-copy"></use>
+            <use href="#s-text" class="text-copy"></use>
+            <use href="#s-text" class="text-copy"></use>
+          </g>
+          
+        </svg>
+      </div>
+    </div>
+
+    
+</body>
+</html>
